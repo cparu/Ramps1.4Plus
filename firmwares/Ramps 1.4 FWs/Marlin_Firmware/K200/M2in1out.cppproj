@@ -1,0 +1,832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{c6f7ae71-5b4e-4261-91be-5518a5cc56ba}</ProjectGuid>
+    <avrdevice>atmega2560</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>M2in1out</AssemblyName>
+    <Name>M2in1out</Name>
+    <RootNamespace>M2in1out</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>
+    </OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <CacheFlash>true</CacheFlash>
+    <UncachedRange />
+    <BootSegment>0</BootSegment>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.34.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <preserveEEPROM>true</preserveEEPROM>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=10606</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_MEGA2560</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../M2in1out</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib</Value>
+      <Value>D:/Arduino1.6.6/libraries/LiquidCrystal/src</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>D:/Arduino1.6.6/libraries/TMC26XStepper</Value>
+      <Value>D:/Arduino1.6.6/libraries/L6470</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/examples</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/utility</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/variants/mega</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include/avr</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.2/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.3/include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.miscellaneous.OtherFlags />
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=10606</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_MEGA2560</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../M2in1out</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib</Value>
+      <Value>D:/Arduino1.6.6/libraries/LiquidCrystal/src</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>D:/Arduino1.6.6/libraries/TMC26XStepper</Value>
+      <Value>D:/Arduino1.6.6/libraries/L6470</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/examples</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/utility</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/variants/mega</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include/avr</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.2/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.3/include</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>../../../M2in1out;D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire;D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire/utility;D:/Arduino1.6.6/libraries/U8glib;D:/Arduino1.6.6/libraries/U8glib/utility;D:/Arduino1.6.6/libraries/LiquidCrystal/src;D:/Arduino1.6.6/hardware/arduino/avr/libraries/SPI;D:/Arduino1.6.6/libraries/TMC26XStepper;D:/Arduino1.6.6/libraries/L6470;D:/Arduino1.6.6/libraries;C:/Users/Administrator/Documents/Arduino/libraries;D:/Arduino1.6.6/hardware/arduino/avr/libraries;D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino;D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/examples;D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/utility;D:/Arduino1.6.6/hardware/arduino/avr/variants/mega;D:/Arduino1.6.6/hardware/tools/avr/avr/include;D:/Arduino1.6.6/hardware/tools/avr/avr/include/avr;D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.8.1/include;D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.2/include;D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.3/include;</VMSETTING_IncludePaths>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=10606</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_MEGA2560</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../M2in1out</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib</Value>
+      <Value>D:/Arduino1.6.6/libraries/LiquidCrystal/src</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>D:/Arduino1.6.6/libraries/TMC26XStepper</Value>
+      <Value>D:/Arduino1.6.6/libraries/L6470</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/examples</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/utility</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/variants/mega</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include/avr</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.2/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.3/include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.miscellaneous.OtherFlags />
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=10606</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+      <Value>ARDUINO_AVR_MEGA2560</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../M2in1out</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib</Value>
+      <Value>D:/Arduino1.6.6/libraries/LiquidCrystal/src</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>D:/Arduino1.6.6/libraries/TMC26XStepper</Value>
+      <Value>D:/Arduino1.6.6/libraries/L6470</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries/U8glib/utility</Value>
+      <Value>D:/Arduino1.6.6/libraries</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/libraries</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/examples</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/utility</Value>
+      <Value>D:/Arduino1.6.6/hardware/arduino/avr/variants/mega</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/avr/include/avr</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.2/include</Value>
+      <Value>D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.3/include</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>../../../M2in1out;D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire;D:/Arduino1.6.6/hardware/arduino/avr/libraries/Wire/utility;D:/Arduino1.6.6/libraries/U8glib;D:/Arduino1.6.6/libraries/U8glib/utility;D:/Arduino1.6.6/libraries/LiquidCrystal/src;D:/Arduino1.6.6/hardware/arduino/avr/libraries/SPI;D:/Arduino1.6.6/libraries/TMC26XStepper;D:/Arduino1.6.6/libraries/L6470;D:/Arduino1.6.6/libraries;C:/Users/Administrator/Documents/Arduino/libraries;D:/Arduino1.6.6/hardware/arduino/avr/libraries;D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino;D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/examples;D:/Arduino1.6.6/hardware/arduino/avr/cores/arduino/utility;D:/Arduino1.6.6/hardware/arduino/avr/variants/mega;D:/Arduino1.6.6/hardware/tools/avr/avr/include;D:/Arduino1.6.6/hardware/tools/avr/avr/include/avr;D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.8.1/include;D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.2/include;D:/Arduino1.6.6/hardware/tools/avr/lib/gcc/avr/4.9.3/include;</VMSETTING_IncludePaths>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="M2in1out.ino">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="__vm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="blinkm.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="blinkm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="boards.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="buzzer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cardreader.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cardreader.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="circularqueue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Conditionals.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Conditionals_LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Conditionals_post.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Configuration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Configuration_adv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="configuration_store.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="configuration_store.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dac_mcp4728.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dac_mcp4728.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="digipot_mcp4451.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_bitmaps.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_6x9_marlin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_HD44780_C.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_HD44780_J.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_HD44780_W.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_ISO10646_1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_ISO10646_1_tr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_ISO10646_5_Cyrillic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_ISO10646_CN.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_ISO10646_Greek.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_ISO10646_Kana.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_Marlin_symbols.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="duration_t.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="endstops.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="endstops.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="endstop_interrupts.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="enum.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="fastio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_an.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_bg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_ca.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_cn.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_cz.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_da.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_de.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_el-gr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_el.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_en.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_es.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_eu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_fi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_fr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_gl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_hr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_it.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_kana.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_kana_utf8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_nl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_pl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_pt-br.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_pt-br_utf8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_pt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_pt_utf8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_ru.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_test.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_tr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_tr_utf8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language_uk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="M100_Free_Mem_Chk.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="macros.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Marlin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MarlinConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MarlinSerial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MarlinSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Marlin_main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mesh_bed_leveling.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mesh_bed_leveling.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nozzle.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pinsDebug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_3DRAG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_5DPRINT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_A4JP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_AZTEEG_X1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_AZTEEG_X3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_AZTEEG_X3_PRO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_BAM_DICE_DUE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_BQ_ZUM_MEGA_3D.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_BRAINWAVE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_BRAINWAVE_PRO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_CHEAPTRONIC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_CNCONTROLS_11.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_CNCONTROLS_12.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_ELEFU_3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_FELIX2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN3_MONOLITHIC.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN3_PLUS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN6.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN6_DELUXE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN7_12.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN7_13.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN7_14.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_GEN7_CUSTOM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_K8200.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_K8400.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_LEAPFROG.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MEGACONTROLLER.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MEGATRONICS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MEGATRONICS_2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MEGATRONICS_3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MELZI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MELZI_MAKR3D.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MIGHTYBOARD_REVE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MINIRAMBO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MINITRONICS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MKS_13.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_MKS_BASE.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_OMCA.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_OMCA_A.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_PRINTRBOARD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_PRINTRBOARD_REVF.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RAMBO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RAMPS.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RAMPS_13.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RAMPS_OLD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RIGIDBOARD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RIGIDBOARD_V2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_RUMBA.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_SAINSMART_2IN1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_SANGUINOLOLU_11.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_SANGUINOLOLU_12.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_SAV_MKI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_SETHI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_STB_11.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_TEENSY2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_TEENSYLU.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_ULTIMAIN_2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_ULTIMAKER.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins_ULTIMAKER_OLD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="planner.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="planner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="planner_bezier.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="planner_bezier.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="point_t.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="printcounter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="printcounter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="qr_solve.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="qr_solve.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SanityCheck.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sd2Card.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sd2Card.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdBaseFile.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdBaseFile.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatStructs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatUtil.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatUtil.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFile.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFile.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdVolume.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdVolume.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="speed_lookuptable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper_dac.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper_dac.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper_indirection.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper_indirection.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stopwatch.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stopwatch.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="thermistornames.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="thermistortables.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="twibus.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="twibus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd_impl_DOGM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd_impl_HD44780.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd_st7920_u8glib_rrd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utf_mapper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utility.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="utility.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vector_3.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vector_3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="watchdog.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="watchdog.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="__vm\.M2in1out.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
