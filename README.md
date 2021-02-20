@@ -2,10 +2,11 @@
 3D Printer Board Ramps 1.4 Plus
 
 also known as BT7272A
+
 note: the display is BT7262A
 
 
-links from reprap/
+links from reprap,HE3D and defunct 3DYMY 
 
 firmware of Repetier:
 https://drive.google.com/file/d/0B8opGltFUVLQMExmM3ptVnBXdG8/view?usp=sharing
