@@ -1,7 +1,7 @@
 # Ramps1.4Plus
 3D Printer Board Ramps 1.4 Plus
 
-also known as BT7272A
+also known as BT7272A (https://reprap.org/wiki/BT7272A)
 
 note: the display is BT7262A
 
